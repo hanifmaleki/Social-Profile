@@ -1,0 +1,50 @@
+@use 'variables';
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    margin-inline-start: auto;
+    margin-inline-end: auto;
+    margin-block-start: clamp(12rem, 14vw, 22rem);
+    background-color: variables.$surface;
+    max-width: 30rem;
+    padding: 3rem;
+}
+
+.avatar {
+    width: 5rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.profile-name-position-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.user-name {
+    font-size: variables.$fs-lg;
+    font-weight: 600;
+}
+
+.user-position {
+    color: variables.$primary;
+}
+
+.social-network-container {
+    border-radius: 0.8rem;
+    padding: 0.8rem;
+    background-color: variables.$bg;
+    font-weight: 600;
+    width: 100%;
+
+    &:hover {
+        color: variables.$surface;
+        background-color: variables.$primary;
+        cursor: pointer;
+    }
+}

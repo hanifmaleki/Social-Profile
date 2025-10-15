@@ -1,0 +1,47 @@
+{
+  "name": "social-profile",
+  "version": "1.0.0",
+  "description": "In this small project, you'll build out your social link-sharing profile. You can even personalize it and use it to share all your social profiles",
+  "keywords": [
+    "Frontend-Mentor",
+    "Social-media-profile"
+  ],
+  "homepage": "https://github.com/hanifmaleki/Social-Profile#readme",
+  "bugs": {
+    "url": "https://github.com/hanifmaleki/Social-Profile/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hanifmaleki/Social-Profile.git"
+  },
+  "license": "ISC",
+  "author": "Hanif Maleki",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "sass src/scss:dist/css",
+    "scss:build": "sass src/scss:dist/css --style=compressed",
+    "pug": "node build-pug.js",
+    "copy-js-assets": "copy-files-from-to --when-file-exists overwrite",
+    "watch": "concurrently 'node chokidar.js' 'live-server dist'",
+    "build": "npm run scss:build && npm run pug && npm run copy-js-assets"
+  },
+  "dependencies": {
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.2.1",
+    "copy-files-from-to": "^3.12.1",
+    "pug-cli": "^1.0.0-alpha6",
+    "sass": "^1.92.1"
+  },
+  "copyFiles": [
+    {
+      "from": "src/js",
+      "to": "dist"
+    },
+    {
+      "from": "assets",
+      "to": "dist/assets"
+    }
+  ]
+}

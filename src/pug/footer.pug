@@ -1,0 +1,11 @@
+.attribution(data-i18n='footer_text')
+
+.language-container(id='LanguageSelector') 
+    ul.languages
+        each language in languages 
+            li(id=language.code)= language.name
+        
+.theme-selector-container(id='ThemeSelector') 
+    ul.themes-list 
+        li(id="dark" data-i18n="dark")
+        li(id="light" data-i18n="light")

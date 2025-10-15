@@ -1,0 +1,33 @@
+@use 'variables';
+
+.attribution {
+    margin-block-start: calc(2rem + 2vw);
+    text-align: center;
+}
+
+
+.languages {
+    li {
+        cursor: pointer;
+        list-style: none;
+        color: variables.$bg;
+
+        &.selected {
+            color: variables.$text;
+            cursor: auto;
+        }
+    }
+}
+
+.themes-list {
+    li {
+        cursor: pointer;
+        list-style: none;
+        color: variables.$bg;
+
+        &.selected {
+            color: variables.$text;
+            cursor: auto;
+        }
+    }
+}

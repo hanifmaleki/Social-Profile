@@ -1,0 +1,43 @@
+// Colors 
+:root {
+    --color-primary: hsl(75, 94%, 57%); /* green*/
+    --color-text: hsl(0, 0%, 100%); /* white */
+
+    --color-bg: hsl(0, 0%, 20%); /* gray 700 */
+    --color-surface: hsl(0, 0%, 12%); /* gray 800 */
+    --color-surface-alt: hsl(0, 0%, 8%); /* gray 900 */
+}
+
+[data-theme="light"] {
+  --color-primary: hsl(75, 94%, 40%);   /* slightly darker green for contrast */
+  --color-text: hsl(0, 0%, 10%);        /* dark text */
+
+  --color-bg: hsl(0, 0%, 98%);          /* light gray body background */
+  --color-surface: hsl(0, 0%, 100%);    /* card background = pure white */
+  --color-surface-alt: hsl(0, 1%, 72%); /* button background = subtle gray */
+}
+
+// SCSS variables reference CSS variables
+$primary: var(--color-primary);
+$text: var(--color-text);
+
+$bg: var(--color-bg);
+$surface: var(--color-surface);
+$surface-alt: var(--color-surface-alt);
+
+// Font-Sizes
+$fs-sm: 1.125rem;
+$fs-base: 1.625rem;
+$fs-lg: 2rem;
+
+// Line-heights
+$lh-base: 2.125rem;
+
+// Breakpoints
+$bp-sm: 480px;
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == sm {
+        @media (min-width: $bp-sm) { @content }
+    }
+}

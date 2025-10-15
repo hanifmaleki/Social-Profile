@@ -1,0 +1,15 @@
+mixin social-network(name)
+    .social-network-container= name 
+
+.card-container 
+    img.avatar(src="assets/images/avatar-jessica.jpeg", alt="Profile Avatar")
+    .profile-name-position-container 
+        h1.user-name Jessica Randall 
+        .user-position London, United Kingdom
+    .job-title "Front-end developer and avid reader."
+    +social-network('GitHub')
+    +social-network('Frontend Mentor')
+    +social-network('LinkedIn')
+    +social-network('Twitter')
+    +social-network('Instagram')
+
